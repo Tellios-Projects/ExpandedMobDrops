@@ -25,5 +25,4 @@ public class ModItems {
 
     public static void registerModItems() {
         ModInit.LOGGER.info("Registering Mod Items for " + Super.MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
     }}
