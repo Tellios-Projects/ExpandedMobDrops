@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "expandedmobdrops",
+  "version": "${version}",
+
+  "name": "Expanded Mob Drops",
+  "description": "ADDME",
+  "authors": [
+    "Leah (@leafenzio), Tellio (@tellioaridoitsu)"
+  ],
+  "contact": {
+    "homepage": "ADDME - website link",
+    "sources": "https://github.com/Tellios-Projects/ExpandedMobDrops"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.leafenzo.expandedmobdrops.ModInit"
+    ],
+    "client": [
+      "net.leafenzo.expandedmobdrops.ModClientInit"
+    ],
+    "fabric-datagen": [
+      "net.leafenzo.expandedmobdrops.datageneration.ModDataGenerator"
+    ]
+  },
+  "accessWidener": "expandedmobdrops.accesswidener",
+  "mixins": [
+    "expandedmobdrops.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "fabric-api": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
