@@ -2,6 +2,7 @@ package net.leafenzo.expandedmobdrops.datageneration;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.leafenzo.expandedmobdrops.item.ModItems;
 import net.leafenzo.expandedmobdrops.registration.WoodSet;
 import net.leafenzo.expandedmobdrops.state.ModProperties;
 import net.minecraft.block.Block;
@@ -212,6 +213,7 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.ANCIENT_MEAT, Models.GENERATED);
 
     }
 }
