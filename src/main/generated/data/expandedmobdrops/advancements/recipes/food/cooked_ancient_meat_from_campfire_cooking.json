@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oxidized_copper": {
+    "has_ancient_meat": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:oxidized_copper"
+              "expandedmobdrops:ancient_meat"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:waxed_oxidized_copper_from_honeycomb"
+        "recipe": "minecraft:cooked_ancient_meat_from_campfire_cooking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_oxidized_copper",
+      "has_ancient_meat",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:waxed_oxidized_copper_from_honeycomb"
+      "minecraft:cooked_ancient_meat_from_campfire_cooking"
     ]
   },
   "sends_telemetry_event": false

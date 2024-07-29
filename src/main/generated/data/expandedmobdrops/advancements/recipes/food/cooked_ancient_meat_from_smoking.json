@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oxidized_cut_copper_stairs": {
+    "has_ancient_meat": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:oxidized_cut_copper_stairs"
+              "expandedmobdrops:ancient_meat"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:waxed_oxidized_cut_copper_stairs_from_honeycomb"
+        "recipe": "minecraft:cooked_ancient_meat_from_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_oxidized_cut_copper_stairs",
+      "has_ancient_meat",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:waxed_oxidized_cut_copper_stairs_from_honeycomb"
+      "minecraft:cooked_ancient_meat_from_smoking"
     ]
   },
   "sends_telemetry_event": false

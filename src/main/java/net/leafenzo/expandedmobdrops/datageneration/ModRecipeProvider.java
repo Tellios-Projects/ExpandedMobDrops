@@ -3,6 +3,7 @@ package net.leafenzo.expandedmobdrops.datageneration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.leafenzo.expandedmobdrops.Super;
+import net.leafenzo.expandedmobdrops.item.ModItems;
 import net.leafenzo.expandedmobdrops.registration.WoodSet;
 import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
@@ -12,6 +13,7 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
@@ -141,10 +143,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         }
     }
 
+    public static void offerMeatCookingRecipes(Consumer<RecipeJsonProvider> exporter, ItemConvertible input, ItemConvertible output) {
+        offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, input, output, 0.35f);
+        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, input, output, 0.35f);
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, input, output, 0.35f);
+    }
+
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        offerWaxingRecipes(exporter);
-        //offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, Items.BLAZE_ROD, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLAZE_ROD_BLOCK);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
     }
 }
 

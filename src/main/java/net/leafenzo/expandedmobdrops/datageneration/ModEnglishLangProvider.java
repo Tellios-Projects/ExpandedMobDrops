@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 import net.leafenzo.expandedmobdrops.Super;
+import net.leafenzo.expandedmobdrops.item.ModItems;
 import net.leafenzo.expandedmobdrops.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -63,7 +64,8 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //Manual
-
+        generateTranslation(translationBuilder, ModItems.ANCIENT_MEAT, "Ancient Chops");
+        generateTranslation(translationBuilder, ModItems.COOKED_ANCIENT_MEAT, "Ancient Steak");
 
         //Automatic
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {

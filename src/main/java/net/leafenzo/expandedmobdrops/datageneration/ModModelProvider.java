@@ -214,6 +214,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.ANCIENT_MEAT, Models.GENERATED);
-
+        itemModelGenerator.register(ModItems.COOKED_ANCIENT_MEAT, Models.GENERATED);
     }
 }

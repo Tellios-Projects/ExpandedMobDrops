@@ -14,11 +14,14 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    //public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
-    //public static final Item RAW_RUBY = registerItem("raw_ruby", new Item(new FabricItemSettings()));
     public static final Item ANCIENT_MEAT = registerItem("ancient_meat", new Item(new FabricItemSettings().food(new FoodComponent.Builder()
             .hunger(4)
             .saturationModifier(0.5f)
+            .build())
+    ));
+    public static final Item COOKED_ANCIENT_MEAT = registerItem("cooked_ancient_meat", new Item(new FabricItemSettings().food(new FoodComponent.Builder()
+            .hunger(9)
+            .saturationModifier(1.6f)
             .build())
     ));
     

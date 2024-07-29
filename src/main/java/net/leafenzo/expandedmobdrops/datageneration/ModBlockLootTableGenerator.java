@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.function.Function;
 
-public class ModLootTableGenerator extends FabricBlockLootTableProvider {
+public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
     public static final ArrayList<Block> usedBlocks = new ArrayList<Block>();
 
     public void addDrop(Block block, ItemConvertible drop) {
@@ -33,7 +33,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         usedBlocks.add(block);
     }
 
-    public ModLootTableGenerator(FabricDataOutput dataOutput) {
+    public ModBlockLootTableGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
 

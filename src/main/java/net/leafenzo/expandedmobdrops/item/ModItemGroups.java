@@ -21,5 +21,6 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.expanded_mob_drops"))
                     .icon(() -> new ItemStack(Blocks.AIR)).entries((displayContext, entries) -> {
                      entries.add(ModItems.ANCIENT_MEAT);
+                     entries.add(ModItems.COOKED_ANCIENT_MEAT);
                     }).build());
 }

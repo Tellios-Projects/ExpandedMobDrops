@@ -6,6 +6,7 @@ import net.leafenzo.expandedmobdrops.item.ModItemGroups;
 import net.leafenzo.expandedmobdrops.item.ModItems;
 import net.leafenzo.expandedmobdrops.particle.ModParticleTypes;
 import net.leafenzo.expandedmobdrops.registries.ModFabricRegistries;
+import net.leafenzo.expandedmobdrops.registry.ModLootTableModifications;
 import net.leafenzo.expandedmobdrops.util.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +24,7 @@ public class ModInit implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
 //        ModBlockEntityType.RegisterModBlockEntityTypes();
+        ModLootTableModifications.registerModLootTableModifications();
         ModParticleTypes.registerModParticleTypes();
         ModFabricRegistries.registerFlammableBlocks();
 //        ModFabricRegistries.registerCompostingChances();

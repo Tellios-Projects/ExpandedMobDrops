@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "expandedmobdrops:ancient_meat"
+  },
+  "result": "expandedmobdrops:cooked_ancient_meat"
+}
