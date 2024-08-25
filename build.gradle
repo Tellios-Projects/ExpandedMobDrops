@@ -75,6 +75,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	// modRuntimeOnly("maven.modrinth:emi:1.1.11+1.20.1+fabric")
+
 
 		// uncomment if needed
 	//include implementation("net.dv8tion:JDA:${project.jda_version}") {

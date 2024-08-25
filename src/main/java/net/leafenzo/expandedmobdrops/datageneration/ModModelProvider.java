@@ -214,6 +214,57 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.ANCIENT_MEAT, Models.GENERATED);
+<<<<<<< Updated upstream
         itemModelGenerator.register(ModItems.COOKED_ANCIENT_MEAT, Models.GENERATED);
+=======
+        itemModelGenerator.register(ModItems.EQUINE_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FELINE_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FOX_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FUNGAL_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FUNGAL_STEAK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GLOW_SQUID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INSECT_FLESH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MOOSHROOM_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PANDA_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POLAR_BEAR_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_AMPHIBIAN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_BIRD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_BUSHMEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_REPTILE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TURTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROASTED_TENDRIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROTTEN_PORKCHOP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SCALEY_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SCULK_TENDRIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNIFFER_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SQUID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRIDER_CHUNK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRIDER_JERKY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRIDER_SKIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_STEAK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARTHROPOD_FLESH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BEAR_HIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BEAR_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BEAR_STEAK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BEAST_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BUGMEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CAMELID_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CANINE_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_AMPHIBIAN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_ARTHROPOD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_BEAST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_BIRD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_BUSHMEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_CAMELID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_CANINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_EQUINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_FELINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_REPTILE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_SQUID, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_TURTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRITTER_MEAT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CRITTER_STEAK, Models.GENERATED);
+>>>>>>> Stashed changes
     }
 }

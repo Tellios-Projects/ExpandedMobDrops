@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "expandedmobdrops:item/critter_steak"
+  }
+}
