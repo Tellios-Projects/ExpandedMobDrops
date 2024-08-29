@@ -21,9 +21,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.expanded_mob_drops"))
                     .icon(() -> new ItemStack(Blocks.AIR)).entries((displayContext, entries) -> {
                      entries.add(ModItems.ANCIENT_MEAT);
-<<<<<<< Updated upstream
                      entries.add(ModItems.COOKED_ANCIENT_MEAT);
-=======
                      entries.add(ModItems.EQUINE_MEAT);
                      entries.add(ModItems.FAT);
                      entries.add(ModItems.FELINE_MEAT);
@@ -72,6 +70,5 @@ public class ModItemGroups {
                      entries.add(ModItems.COOKED_TURTLE);
                      entries.add(ModItems.CRITTER_MEAT);
                      entries.add(ModItems.CRITTER_STEAK);
->>>>>>> Stashed changes
                     }).build());
 }

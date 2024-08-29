@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
   "item.expandedmobdrops.ancient_meat": "Ancient Chops",
-  "item.expandedmobdrops.cooked_ancient_meat": "Ancient Steak",
-=======
-  "item.expandedmobdrops.ancient_meat": "Ancient Meat",
   "item.expandedmobdrops.ancient_steak": "Ancient Steak",
   "item.expandedmobdrops.arthropod_flesh": "Arthropod Flesh",
   "item.expandedmobdrops.bear_hide": "Bear Hide",
@@ -14,6 +10,7 @@
   "item.expandedmobdrops.camelid_meat": "Camelid Meat",
   "item.expandedmobdrops.canine_meat": "Canine Meat",
   "item.expandedmobdrops.cooked_amphibian": "Cooked Amphibian",
+  "item.expandedmobdrops.cooked_ancient_meat": "Ancient Steak",
   "item.expandedmobdrops.cooked_arthropod": "Cooked Arthropod",
   "item.expandedmobdrops.cooked_beast": "Cooked Beast",
   "item.expandedmobdrops.cooked_bird": "Cooked Bird",
@@ -52,6 +49,5 @@
   "item.expandedmobdrops.strider_chunk": "Strider Chunk",
   "item.expandedmobdrops.strider_jerky": "Strider Jerky",
   "item.expandedmobdrops.strider_skin": "Strider Skin",
->>>>>>> Stashed changes
   "itemgroup.expanded_mob_drops": "Expanded Mob Drops"
 }

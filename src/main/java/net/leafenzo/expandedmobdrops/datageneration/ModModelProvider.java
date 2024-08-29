@@ -214,9 +214,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.ANCIENT_MEAT, Models.GENERATED);
-<<<<<<< Updated upstream
         itemModelGenerator.register(ModItems.COOKED_ANCIENT_MEAT, Models.GENERATED);
-=======
         itemModelGenerator.register(ModItems.EQUINE_MEAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.FAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.FELINE_MEAT, Models.GENERATED);
@@ -265,6 +263,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.COOKED_TURTLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRITTER_MEAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRITTER_STEAK, Models.GENERATED);
->>>>>>> Stashed changes
     }
 }
