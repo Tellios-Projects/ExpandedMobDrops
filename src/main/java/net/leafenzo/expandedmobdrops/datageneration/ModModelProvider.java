@@ -240,7 +240,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STRIDER_CHUNK, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRIDER_JERKY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRIDER_SKIN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ANCIENT_STEAK, Models.GENERATED);
         itemModelGenerator.register(ModItems.ARTHROPOD_FLESH, Models.GENERATED);
         itemModelGenerator.register(ModItems.BEAR_HIDE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BEAR_MEAT, Models.GENERATED);

@@ -40,14 +40,13 @@ public class ModItemGroups {
                      entries.add(ModItems.RAW_TURTLE);
                      entries.add(ModItems.ROASTED_TENDRIL);
                      entries.add(ModItems.ROTTEN_PORKCHOP);
-                     entries.add(ModItems.SCALEY_HIDE);
+                     entries.add(ModItems.SCALY_HIDE);
                      entries.add(ModItems.SCULK_TENDRIL);
                      entries.add(ModItems.SNIFFER_HIDE);
                      entries.add(ModItems.SQUID);
                      entries.add(ModItems.STRIDER_CHUNK);
                      entries.add(ModItems.STRIDER_JERKY);
                      entries.add(ModItems.STRIDER_SKIN);
-                     entries.add(ModItems.ANCIENT_STEAK);
                      entries.add(ModItems.ARTHROPOD_FLESH);
                      entries.add(ModItems.BEAR_HIDE);
                      entries.add(ModItems.BEAR_MEAT);

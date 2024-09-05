@@ -152,6 +152,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+        offerMeatCookingRecipes(exporter, ModItems.ANCIENT_MEAT, ModItems.COOKED_ANCIENT_MEAT);
+
     }
 }
 
