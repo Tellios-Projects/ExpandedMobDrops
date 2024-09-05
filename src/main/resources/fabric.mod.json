@@ -4,12 +4,12 @@
   "version": "${version}",
 
   "name": "Expanded Mob Drops",
-  "description": "ADDME",
+  "description": "Adds more types of animal meat.",
   "authors": [
-    "Leah (@leafenzio), Tellio (@tellioaridoitsu)"
+    "Leah (@leafenzio), Eliza (@tellioaridoitsu)"
   ],
   "contact": {
-    "homepage": "ADDME - website link",
+    "homepage": "https://modrinth.com/mod/expanded-mob-drops",
     "sources": "https://github.com/Tellios-Projects/ExpandedMobDrops"
   },
 
