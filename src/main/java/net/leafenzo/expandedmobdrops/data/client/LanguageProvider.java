@@ -1,4 +1,4 @@
-package net.leafenzo.expandedmobdrops.data;
+package net.leafenzo.expandedmobdrops.data.client;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -10,7 +10,7 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 public class LanguageProvider extends FabricLanguageProvider {
-    protected LanguageProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> lookup) {
+    public LanguageProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> lookup) {
         super(output, lookup);
     }
 

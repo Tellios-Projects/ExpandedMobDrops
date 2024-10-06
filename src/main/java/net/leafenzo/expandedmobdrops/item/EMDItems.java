@@ -10,13 +10,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class EMDItems {
-    public static final Item FAT_BLOCK = register("fat_block", new BlockItem(EMDBlocks.FAT_BLOCK, new Item.Settings()));
-
     // Mammal Meats
     public static final Item BEAR_MEAT = registerFood(
             "bear_meat",
             new FoodComponent.Builder()
     );
+    
     public static final Item BEAR_STEAK = registerFood(
             "bear_steak",
             new FoodComponent.Builder()
@@ -26,6 +25,7 @@ public class EMDItems {
             "beast_meat",
             new FoodComponent.Builder()
     );
+    
     public static final Item COOKED_BEAST = registerFood(
             "cooked_beast",
             new FoodComponent.Builder()
@@ -35,6 +35,7 @@ public class EMDItems {
             "canine_meat",
             new FoodComponent.Builder()
     );
+    
     public static final Item COOKED_CANINE = registerFood(
             "cooked_canine",
             new FoodComponent.Builder()
@@ -44,6 +45,7 @@ public class EMDItems {
             "feline_meat",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_FELINE = registerFood(
             "cooked_feline",
             new FoodComponent.Builder()
@@ -53,6 +55,7 @@ public class EMDItems {
             "equine_meat",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_EQUINE = registerFood(
             "cooked_equine",
             new FoodComponent.Builder()
@@ -62,6 +65,7 @@ public class EMDItems {
             "camelid_meat",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_CAMELID = registerFood(
             "cooked_camelid",
             new FoodComponent.Builder()
@@ -72,6 +76,7 @@ public class EMDItems {
             "raw_bushmeat",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_BUSHMEAT = registerFood(
             "cooked_bushmeat",
             new FoodComponent.Builder()
@@ -86,6 +91,7 @@ public class EMDItems {
             "arthropod_flesh",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_ARTHROPOD = registerFood(
             "cooked_arthropod",
             new FoodComponent.Builder()
@@ -100,6 +106,7 @@ public class EMDItems {
             "critter_meat",
             new FoodComponent.Builder()
     );
+
     public static final Item CRITTER_STEAK = registerFood(
             "critter_steak",
             new FoodComponent.Builder()
@@ -110,6 +117,7 @@ public class EMDItems {
             "raw_reptile",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_REPTILE = registerFood(
             "cooked_reptile",
             new FoodComponent.Builder()
@@ -119,6 +127,7 @@ public class EMDItems {
             "raw_amphibian",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_AMPHIBIAN = registerFood(
             "cooked_amphibian",
             new FoodComponent.Builder()
@@ -128,6 +137,7 @@ public class EMDItems {
             "raw_turtle",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_TURTLE = registerFood(
             "cooked_turtle",
             new FoodComponent.Builder()
@@ -138,6 +148,7 @@ public class EMDItems {
             "raw_bird",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_BIRD = registerFood(
             "cooked_bird",
             new FoodComponent.Builder()
@@ -148,6 +159,7 @@ public class EMDItems {
             "squid",
             new FoodComponent.Builder()
     );
+
     public static final Item COOKED_SQUID = registerFood(
             "cooked_squid",
             new FoodComponent.Builder()
@@ -163,6 +175,7 @@ public class EMDItems {
             "ancient_chops",
             new FoodComponent.Builder()
     );
+
     public static final Item ANCIENT_STEAK = registerFood(
             "ancient_steak",
             new FoodComponent.Builder()
@@ -172,6 +185,7 @@ public class EMDItems {
             "fungal_meat",
             new FoodComponent.Builder()
     );
+
     public static final Item FUNGAL_STEAK = registerFood(
             "fungal_steak",
             new FoodComponent.Builder()
@@ -196,14 +210,9 @@ public class EMDItems {
             "strider_chunk",
             new FoodComponent.Builder()
     );
+
     public static final Item STRIDER_JERKY = registerFood(
             "strider_jerky",
-            new FoodComponent.Builder()
-    );
-
-    // Miscellaneous Items
-    public static final Item FAT = registerFood(
-            "fat",
             new FoodComponent.Builder()
     );
 
@@ -247,6 +256,14 @@ public class EMDItems {
             "strider_skin",
             new FoodComponent.Builder()
     );
+
+    // Miscellaneous Items
+    public static final Item FAT = registerFood(
+            "fat",
+            new FoodComponent.Builder()
+    );
+
+    public static final Item FAT_BLOCK = register("fat_block", new BlockItem(EMDBlocks.FAT_BLOCK, new Item.Settings()));
 
     private static Item register(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ExpandedMobDrops.MOD_ID, id), item);

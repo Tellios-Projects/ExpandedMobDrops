@@ -1,4 +1,4 @@
-package net.leafenzo.expandedmobdrops.data;
+package net.leafenzo.expandedmobdrops.data.client;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;

@@ -1,4 +1,4 @@
-package net.leafenzo.expandedmobdrops.data;
+package net.leafenzo.expandedmobdrops.data.server;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -7,8 +7,8 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class BlockLootTableGenerator extends FabricBlockLootTableProvider {
-    public BlockLootTableGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> lookup) {
+public class BlockLootTableProvider extends FabricBlockLootTableProvider {
+    public BlockLootTableProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> lookup) {
         super(output, lookup);
     }
 
