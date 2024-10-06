@@ -10,7 +10,8 @@
     ],
     "contact": {
         "homepage": "https://modrinth.com/mod/expanded-mob-drops",
-        "sources": "https://github.com/Tellios-Projects/ExpandedMobDrops"
+        "sources": "https://github.com/Tellios-Projects/ExpandedMobDrops",
+        "issues": "https://github.com/Tellios-Projects/ExpandedMobDrops/issues"
     },
     "license": "MIT",
     "icon": "assets/expandedmobdrops/icon.png",
