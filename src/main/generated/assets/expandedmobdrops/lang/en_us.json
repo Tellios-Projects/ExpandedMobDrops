@@ -1,6 +1,5 @@
 {
   "item.expandedmobdrops.ancient_meat": "Ancient Chops",
-  "item.expandedmobdrops.ancient_steak": "Ancient Steak",
   "item.expandedmobdrops.arthropod_flesh": "Arthropod Flesh",
   "item.expandedmobdrops.bear_hide": "Bear Hide",
   "item.expandedmobdrops.bear_meat": "Bear Meat",
@@ -42,7 +41,7 @@
   "item.expandedmobdrops.raw_turtle": "Raw Turtle",
   "item.expandedmobdrops.roasted_tendril": "Roasted Tendril",
   "item.expandedmobdrops.rotten_porkchop": "Rotten Porkchop",
-  "item.expandedmobdrops.scaley_hide": "Scaley Hide",
+  "item.expandedmobdrops.scaly_hide": "Scaly Hide",
   "item.expandedmobdrops.sculk_tendril": "Sculk Tendril",
   "item.expandedmobdrops.sniffer_hide": "Sniffer Hide",
   "item.expandedmobdrops.squid": "Squid",
