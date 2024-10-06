@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sculk_tendril": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandedmobdrops:sculk_tendril"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:roasted_tendril_from_sculk_tendril_in_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sculk_tendril"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:roasted_tendril_from_sculk_tendril_in_smoking"
+    ]
+  }
+}

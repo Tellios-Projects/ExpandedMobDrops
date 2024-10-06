@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bear_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandedmobdrops:bear_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bear_steak_from_bear_meat_in_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bear_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bear_steak_from_bear_meat_in_campfire_cooking"
+    ]
+  }
+}

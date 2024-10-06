@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_arthropod_flesh": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandedmobdrops:arthropod_flesh"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cooked_arthropod_from_arthropod_flesh_in_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_arthropod_flesh"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cooked_arthropod_from_arthropod_flesh_in_smoking"
+    ]
+  }
+}

@@ -2,6 +2,7 @@ package net.leafenzo.expandedmobdrops.item;
 
 import net.leafenzo.expandedmobdrops.ExpandedMobDrops;
 import net.leafenzo.expandedmobdrops.block.EMDBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -71,7 +72,8 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    // Critter, Insect & Bushmeat
+    /* Critter, Insect & Bushmeat */
+
     public static final Item RAW_BUSHMEAT = registerFood(
             "raw_bushmeat",
             new FoodComponent.Builder()
@@ -112,7 +114,8 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    // Reptile & Amphibian Meats
+    /* Reptile & Amphibian Meats */
+
     public static final Item RAW_REPTILE = registerFood(
             "raw_reptile",
             new FoodComponent.Builder()
@@ -143,7 +146,8 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    // Bird & Flying Creatures
+    /* Bird & Flying Creatures */
+
     public static final Item RAW_BIRD = registerFood(
             "raw_bird",
             new FoodComponent.Builder()
@@ -154,7 +158,8 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    // Fish & Squid Meats
+    /* Fish & Squid Meats */
+
     public static final Item SQUID = registerFood(
             "squid",
             new FoodComponent.Builder()
@@ -170,7 +175,8 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    // Fantasy Meats
+    /* Fantasy Meats */
+
     public static final Item ANCIENT_CHOPS = registerFood(
             "ancient_chops",
             new FoodComponent.Builder()
@@ -191,18 +197,13 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    public static final Item ROASTED_TENDRIL = registerFood(
-            "roasted_tendril",
-            new FoodComponent.Builder()
-    );
-
-    public static final Item ROTTEN_PORKCHOP = registerFood(
-            "rotten_porkchop",
-            new FoodComponent.Builder()
-    );
-
     public static final Item SCULK_TENDRIL = registerFood(
             "sculk_tendril",
+            new FoodComponent.Builder()
+    );
+
+    public static final Item ROASTED_TENDRIL = registerFood(
+            "roasted_tendril",
             new FoodComponent.Builder()
     );
 
@@ -216,54 +217,26 @@ public class EMDItems {
             new FoodComponent.Builder()
     );
 
-    // Animal Hides
-    public static final Item FOX_HIDE = registerFood(
-            "fox_hide",
+    public static final Item ROTTEN_PORKCHOP = registerFood(
+            "rotten_porkchop",
             new FoodComponent.Builder()
     );
 
-    public static final Item MOOSHROOM_HIDE = registerFood(
-            "mooshroom_hide",
-            new FoodComponent.Builder()
-    );
+    /* Animal Hides */
 
-    public static final Item PANDA_HIDE = registerFood(
-            "panda_hide",
-            new FoodComponent.Builder()
-    );
+    public static final Item FOX_HIDE = registerMaterial("fox_hide");
+    public static final Item MOOSHROOM_HIDE = registerMaterial("mooshroom_hide");
+    public static final Item PANDA_HIDE = registerMaterial("panda_hide");
+    public static final Item POLAR_BEAR_HIDE = registerMaterial("polar_bear_hide");
+    public static final Item SCALY_HIDE = registerMaterial("scaly_hide");
+    public static final Item SNIFFER_HIDE = registerMaterial("sniffer_hide");
+    public static final Item BEAR_HIDE = registerMaterial("bear_hide");
+    public static final Item STRIDER_SKIN = registerMaterial("strider_skin");
 
-    public static final Item POLAR_BEAR_HIDE = registerFood(
-            "polar_bear_hide",
-            new FoodComponent.Builder()
-    );
+    /* Misc */
 
-    public static final Item SCALY_HIDE = registerFood(
-            "scaly_hide",
-            new FoodComponent.Builder()
-    );
-
-    public static final Item SNIFFER_HIDE = registerFood(
-            "sniffer_hide",
-            new FoodComponent.Builder()
-    );
-
-    public static final Item BEAR_HIDE = registerFood(
-            "bear_hide",
-            new FoodComponent.Builder()
-    );
-
-    public static final Item STRIDER_SKIN = registerFood(
-            "strider_skin",
-            new FoodComponent.Builder()
-    );
-
-    // Miscellaneous Items
-    public static final Item FAT = registerFood(
-            "fat",
-            new FoodComponent.Builder()
-    );
-
-    public static final Item FAT_BLOCK = register("fat_block", new BlockItem(EMDBlocks.FAT_BLOCK, new Item.Settings()));
+    public static final Item FAT = registerMaterial("fat");
+    public static final Item FAT_BLOCK = registerBlock("fat_block", EMDBlocks.FAT_BLOCK);
 
     private static Item register(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ExpandedMobDrops.MOD_ID, id), item);
@@ -272,5 +245,13 @@ public class EMDItems {
     private static Item registerFood(String id, FoodComponent.Builder builder) {
         Item item = new Item(new Item.Settings().food(builder.build()));
         return register(id, item);
+    }
+
+    private static Item registerMaterial(String id) {
+        return register(id, new Item(new Item.Settings()));
+    }
+
+    private static Item registerBlock(String id, Block block) {
+        return register(id, new BlockItem(block, new Item.Settings()));
     }
 }

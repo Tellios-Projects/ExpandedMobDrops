@@ -34,6 +34,7 @@
             "environment": "client"
         }
     ],
+    "accessWidener": "expandedmobdrops.accesswidener",
     "depends": {
         "fabricloader": ">=0.16.5",
         "minecraft": "~1.21.1",

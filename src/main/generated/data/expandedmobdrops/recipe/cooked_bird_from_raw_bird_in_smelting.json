@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "expandedmobdrops:raw_bird"
+  },
+  "result": {
+    "id": "expandedmobdrops:cooked_bird"
+  }
+}

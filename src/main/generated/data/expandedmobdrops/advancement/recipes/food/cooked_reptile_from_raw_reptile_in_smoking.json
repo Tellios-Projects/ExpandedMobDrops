@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_reptile": {
+      "conditions": {
+        "items": [
+          {
+            "items": "expandedmobdrops:raw_reptile"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cooked_reptile_from_raw_reptile_in_smoking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_reptile"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cooked_reptile_from_raw_reptile_in_smoking"
+    ]
+  }
+}
