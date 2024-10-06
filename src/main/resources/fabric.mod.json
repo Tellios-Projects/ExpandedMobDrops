@@ -1,0 +1,41 @@
+{
+    "schemaVersion": 1,
+    "id": "expandedmobdrops",
+    "version": "${version}",
+    "name": "Expanded Mob Drops",
+    "description": "Adds more types of animal meat.",
+    "authors": [
+        "Eliza (@tellioaridoitsu)",
+        "Leah (@leafenzio)"
+    ],
+    "contact": {
+        "homepage": "https://modrinth.com/mod/expanded-mob-drops",
+        "sources": "https://github.com/Tellios-Projects/ExpandedMobDrops"
+    },
+    "license": "MIT",
+    "icon": "assets/expandedmobdrops/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.leafenzo.expandedmobdrops.ExpandedMobDrops"
+        ],
+        "client": [
+            "net.leafenzo.expandedmobdrops.ExpandedMobDropsClient"
+        ],
+        "fabric-datagen": [
+            "net.leafenzo.expandedmobdrops.data.ExpandedMobDropsDataGenerator"
+        ]
+    },
+    "mixins": [
+        "expandedmobdrops.mixins.json",
+        {
+            "config": "expandedmobdrops.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.5",
+        "minecraft": "~1.21.1",
+        "fabric-api": "*"
+    }
+}
