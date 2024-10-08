@@ -235,7 +235,15 @@ public class EMDItems {
 
     /* Misc */
 
-    public static final Item FAT = registerMaterial("fat");
+    public static final Item FAT = registerFood(
+            "fat",
+            new FoodComponent.Builder()
+                    .nutrition(2)
+                    .saturationModifier(0.8f)
+                    .alwaysEdible()
+                    .snack()
+    );
+
     public static final Item FAT_BLOCK = registerBlock("fat_block", EMDBlocks.FAT_BLOCK);
 
     private static Item register(String id, Item item) {
