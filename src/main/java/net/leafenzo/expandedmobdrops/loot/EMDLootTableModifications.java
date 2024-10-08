@@ -52,39 +52,70 @@ public class EMDLootTableModifications {
 
     private void setupModifiers() {
         addModifier(EntityType.POLAR_BEAR, (builder, lookup) -> {
-            addSmeltableMobDrop(builder, lookup, EMDItems.BEAR_MEAT);
-            addMobDrop(builder, EMDItems.BEAR_HIDE);
-            addMobDrop(builder, EMDItems.POLAR_BEAR_HIDE);
+            addSmeltableMobDrop(builder, lookup, EMDItems.BEAR_MEAT, 2.0f);
+            addMobDrop(builder, EMDItems.BEAR_HIDE, 1.0f);
+            addMobDrop(builder, EMDItems.POLAR_BEAR_HIDE, 1.0f);
         });
 
-        addSimpleSmeltableMobDrop(EntityType.RAVAGER, EMDItems.BEAST_MEAT);
-        addSimpleSmeltableMobDrop(EntityType.WOLF, EMDItems.CANINE_MEAT);
-        addSimpleSmeltableMobDrop(EntityType.OCELOT, EMDItems.FELINE_MEAT);
-        addSimpleSmeltableMobDrop(EntityType.CAT, EMDItems.FELINE_MEAT);
-        addSimpleSmeltableMobDrop(EntityType.HORSE, EMDItems.EQUINE_MEAT);
-        addSimpleSmeltableMobDrop(EntityType.CAMEL, EMDItems.CAMELID_MEAT);
-        addSimpleSmeltableMobDrop(EntityType.SPIDER, EMDItems.ARTHROPOD_FLESH);
-        addSimpleSmeltableMobDrop(EntityType.FROG, EMDItems.RAW_AMPHIBIAN);
-        addSimpleSmeltableMobDrop(EntityType.TURTLE, EMDItems.RAW_TURTLE);
-        addSimpleSmeltableMobDrop(EntityType.PARROT, EMDItems.RAW_BIRD);
-        addSimpleSmeltableMobDrop(EntityType.SQUID, EMDItems.SQUID);
-        addSimpleSmeltableMobDrop(EntityType.GLOW_SQUID, EMDItems.GLOW_SQUID);
+        addSimpleSmeltableMobDrop(EntityType.RAVAGER, EMDItems.BEAST_MEAT, 2.0f);
+
+        addModifier(EntityType.WOLF, this::addCanineDrops);
+        addModifier(EntityType.FOX, (builder, lookup) -> {
+            this.addCanineDrops(builder, lookup);
+            addMobDrop(builder, EMDItems.FOX_HIDE, 1.0f);
+        });
+
+        addModifier(EntityType.CAT, this::addFelineDrops);
+        addModifier(EntityType.OCELOT, this::addFelineDrops);
+
+        addModifier(EntityType.HORSE, this::addEquineDrops);
+        addModifier(EntityType.DONKEY, this::addEquineDrops);
+        addModifier(EntityType.MULE, this::addEquineDrops);
+
+        addModifier(EntityType.CAMEL, this::addCamelidDrops);
+        addModifier(EntityType.LLAMA, this::addCamelidDrops);
+
+        addModifier(EntityType.BEE, this::addBugDrops);
+        addModifier(EntityType.SILVERFISH, this::addBugDrops);
+        addModifier(EntityType.ENDERMITE, this::addBugDrops);
+
+        addModifier(EntityType.SPIDER, this::addArthropodDrops);
+        addModifier(EntityType.CAVE_SPIDER, this::addArthropodDrops);
+
+        addModifier(EntityType.FROG, this::addAmphibianDrops);
+        addModifier(EntityType.AXOLOTL, this::addAmphibianDrops);
+
+        addSimpleSmeltableMobDrop(EntityType.TURTLE, EMDItems.RAW_TURTLE, 2.0f);
+        addSimpleSmeltableMobDrop(EntityType.PARROT, EMDItems.RAW_BIRD, 2.0f);
+        addSimpleSmeltableMobDrop(EntityType.SQUID, EMDItems.SQUID, 2.0f);
+        addSimpleSmeltableMobDrop(EntityType.GLOW_SQUID, EMDItems.GLOW_SQUID, 2.0f);
+        addSimpleSmeltableMobDrop(EntityType.ARMADILLO, EMDItems.RAW_BUSHMEAT, 2.0f);
+        addSimpleSmeltableMobDrop(EntityType.BAT, EMDItems.CRITTER_MEAT, 2.0f);
 
         addModifier(EntityType.WARDEN, (builder, lookup) -> {
-            addSmeltableMobDrop(builder, lookup, EMDItems.ANCIENT_CHOPS);
-            addSmeltableMobDrop(builder, lookup, EMDItems.SCULK_TENDRIL);
+            addSmeltableMobDrop(builder, lookup, EMDItems.SCULK_TENDRIL, 2.0f);
         });
 
         addModifier(EntityType.MOOSHROOM, (builder, lookup) -> {
-            addSmeltableMobDrop(builder, lookup, EMDItems.FUNGAL_MEAT);
-            addMobDrop(builder, EMDItems.MOOSHROOM_HIDE);
+            addSmeltableMobDrop(builder, lookup, EMDItems.FUNGAL_MEAT, 2.0f);
+            addMobDrop(builder, EMDItems.MOOSHROOM_HIDE, 1.0f);
         });
 
-        addSimpleSmeltableMobDrop(EntityType.STRIDER, EMDItems.STRIDER_CHUNK);
+        addSimpleSmeltableMobDrop(EntityType.STRIDER, EMDItems.STRIDER_CHUNK, 2.0f);
 
-        addSimpleMobDrop(EntityType.FOX, EMDItems.FOX_HIDE);
-        addSimpleMobDrop(EntityType.PANDA, EMDItems.PANDA_HIDE);
-        addSimpleMobDrop(EntityType.SNIFFER, EMDItems.SNIFFER_HIDE);
+        addSimpleMobDrop(EntityType.PANDA, EMDItems.PANDA_HIDE, 1.0f);
+
+        addModifier(EntityType.SNIFFER, (builder, lookup) -> {
+            addSmeltableMobDrop(builder, lookup, EMDItems.ANCIENT_CHOPS, 2.0f);
+            addMobDrop(builder, EMDItems.SNIFFER_HIDE, 1.0f);
+        });
+
+        addModifier(EntityType.PIG, createFatDrops(3.0f));
+        addModifier(EntityType.HOGLIN, createFatDrops(3.0f));
+
+        addModifier(EntityType.COW, createFatDrops(2.0f));
+        addModifier(EntityType.GOAT, createFatDrops(2.0f));
+        addModifier(EntityType.SHEEP, createFatDrops(2.0f));
     }
 
     /**
@@ -100,39 +131,74 @@ public class EMDLootTableModifications {
         modifiers.put(id, modifier);
     }
 
-    private void addSimpleMobDrop(EntityType<?> type, Item item) {
-        addModifier(type, (builder, lookup) -> addMobDrop(builder, item));
+    private void addSimpleMobDrop(EntityType<?> type, Item item, float max) {
+        addModifier(type, (builder, lookup) -> addMobDrop(builder, item, max));
     }
 
     /**
      * Adds a smeltable mob drop to the given entity.
      */
-    private static void addMobDrop(LootTable.Builder builder, Item item) {
+    private static void addMobDrop(LootTable.Builder builder, Item item, float max) {
         builder.pool(
                 LootPool.builder()
                         .with(
                                 ItemEntry.builder(item)
-                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, max)))
                         )
         );
     }
 
-    private void addSimpleSmeltableMobDrop(EntityType<?> type, Item item) {
-        addModifier(type, (builder, lookup) -> addSmeltableMobDrop(builder, lookup, item));
+    private void addSimpleSmeltableMobDrop(EntityType<?> type, Item item, float max) {
+        addModifier(type, (builder, lookup) -> addSmeltableMobDrop(builder, lookup, item, max));
     }
 
     /**
      * Adds a smeltable mob drop to the given entity.
      */
-    private static void addSmeltableMobDrop(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup, Item item) {
+    private static void addSmeltableMobDrop(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup, Item item, float max) {
         builder.pool(
                 LootPool.builder()
                         .with(
                                 ItemEntry.builder(item)
-                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, max)))
                                         .apply(FurnaceSmeltLootFunction.builder().conditionally(createSmeltLootCondition(lookup)))
                         )
         );
+    }
+
+    private void addBugDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addMobDrop(builder, EMDItems.BUGMEAT, 2.0f);
+    }
+
+    private void addArthropodDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addSmeltableMobDrop(builder, lookup, EMDItems.ARTHROPOD_FLESH, 2.0f);
+    }
+
+    private void addEquineDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addSmeltableMobDrop(builder, lookup, EMDItems.EQUINE_MEAT, 2.0f);
+    }
+
+    private void addAmphibianDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addSmeltableMobDrop(builder, lookup, EMDItems.RAW_AMPHIBIAN, 2.0f);
+    }
+
+    private void addCamelidDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addSmeltableMobDrop(builder, lookup, EMDItems.CAMELID_MEAT, 2.0f);
+        addMobDrop(builder, EMDItems.FAT, 2.0f);
+    }
+
+    private void addCanineDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addSmeltableMobDrop(builder, lookup, EMDItems.CANINE_MEAT, 2.0f);
+    }
+
+    private void addFelineDrops(LootTable.Builder builder, RegistryWrapper.WrapperLookup lookup) {
+        addSmeltableMobDrop(builder, lookup, EMDItems.FELINE_MEAT, 2.0f);
+    }
+
+    private LootTableModifier createFatDrops(float max) {
+        return (builder, lookup) -> {
+            addMobDrop(builder, EMDItems.FAT, max);
+        };
     }
 
     private static AnyOfLootCondition.Builder createSmeltLootCondition(RegistryWrapper.WrapperLookup lookup) {
