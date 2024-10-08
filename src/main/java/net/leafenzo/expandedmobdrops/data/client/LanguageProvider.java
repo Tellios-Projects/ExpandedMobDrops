@@ -23,7 +23,7 @@ public class LanguageProvider extends FabricLanguageProvider {
         builder.add(EMDItems.ANCIENT_CHOPS, "Ancient Chops");
         builder.add(EMDItems.ANCIENT_STEAK, "Ancient Steak");
         builder.add(EMDItems.EQUINE_MEAT, "Equine Meat");
-        builder.add(EMDItems.FAT, "Fat");
+        builder.add(EMDItems.FAT, "Lump of Fat");
         builder.add(EMDItems.FELINE_MEAT, "Feline Meat");
         builder.add(EMDItems.FOX_HIDE, "Fox Hide");
         builder.add(EMDItems.FUNGAL_MEAT, "Fungal Meat");
