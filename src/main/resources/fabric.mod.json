@@ -21,7 +21,7 @@
             "net.leafenzo.expandedmobdrops.ExpandedMobDrops"
         ],
         "client": [
-            "net.leafenzo.expandedmobdrops.ExpandedMobDropsClient"
+            "net.leafenzo.expandedmobdrops.client.ExpandedMobDropsClient"
         ],
         "fabric-datagen": [
             "net.leafenzo.expandedmobdrops.data.ExpandedMobDropsDataGenerator"

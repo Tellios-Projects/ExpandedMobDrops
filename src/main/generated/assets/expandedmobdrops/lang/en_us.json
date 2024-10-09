@@ -1,5 +1,6 @@
 {
   "block.expandedmobdrops.fat_block": "Fat Block",
+  "block.expandedmobdrops.fox_hide": "Fox Hide",
   "item.expandedmobdrops.ancient_chops": "Ancient Chops",
   "item.expandedmobdrops.ancient_steak": "Ancient Steak",
   "item.expandedmobdrops.arthropod_flesh": "Arthropod Flesh",
@@ -27,7 +28,6 @@
   "item.expandedmobdrops.equine_meat": "Equine Meat",
   "item.expandedmobdrops.fat": "Lump of Fat",
   "item.expandedmobdrops.feline_meat": "Feline Meat",
-  "item.expandedmobdrops.fox_hide": "Fox Hide",
   "item.expandedmobdrops.fungal_meat": "Fungal Meat",
   "item.expandedmobdrops.fungal_steak": "Fungal Steak",
   "item.expandedmobdrops.glow_squid": "Glow Squid",

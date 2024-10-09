@@ -224,7 +224,7 @@ public class EMDItems {
 
     /* Animal Hides */
 
-    public static final Item FOX_HIDE = registerMaterial("fox_hide");
+    public static final Item FOX_HIDE = registerBlock("fox_hide", EMDBlocks.FOX_HIDE);
     public static final Item MOOSHROOM_HIDE = registerMaterial("mooshroom_hide");
     public static final Item PANDA_HIDE = registerMaterial("panda_hide");
     public static final Item POLAR_BEAR_HIDE = registerMaterial("polar_bear_hide");

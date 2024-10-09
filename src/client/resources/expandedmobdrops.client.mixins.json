@@ -1,6 +1,6 @@
 {
     "required": true,
-    "package": "net.leafenzo.expandedmobdrops.mixin.client",
+    "package": "net.leafenzo.expandedmobdrops.client.mixin",
     "compatibilityLevel": "JAVA_21",
     "client": [
     ],

@@ -3,6 +3,7 @@
     "package": "net.leafenzo.expandedmobdrops.mixin",
     "compatibilityLevel": "JAVA_21",
     "mixins": [
+        "AbstractBlockSettingsMixin"
     ],
     "injectors": {
         "defaultRequire": 1

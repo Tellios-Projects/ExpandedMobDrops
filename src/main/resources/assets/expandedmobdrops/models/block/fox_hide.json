@@ -1,0 +1,19 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "expandedmobdrops:block/fox_hide",
+		"particle": "expandedmobdrops:block/fox_hide"
+	},
+	"elements": [
+		{
+			"from": [2, 0.1, 0],
+			"to": [14, 0.1, 20],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 0]},
+			"faces": {
+				"up": {"uv": [0, 0, 6, 10], "texture": "#0"},
+				"down": {"uv": [0, 0, 6, 10], "texture": "#0"}
+			}
+		}
+	]
+}
