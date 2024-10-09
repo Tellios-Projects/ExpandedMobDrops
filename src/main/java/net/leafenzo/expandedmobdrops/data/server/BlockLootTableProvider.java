@@ -15,5 +15,6 @@ public class BlockLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(EMDBlocks.FAT_BLOCK);
+        addDrop(EMDBlocks.FOX_HIDE);
     }
 }
